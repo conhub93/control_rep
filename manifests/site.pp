@@ -5,6 +5,6 @@ node default {
      content => "I want this to throw an error so I know if node master.puppet.vm does not exist",
    }
 }
-node 'master.puppet.vm' {
+node 'master.puppet.vmm' {
   include role::master_server
 }
