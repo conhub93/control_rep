@@ -1,5 +1,5 @@
 node default {
-  file { '/root/README.md':
+  file { '/root/test.md':
      ensure => file,
      owner => 'nodes_do_not_exist',
      content => "I want this to throw an error so I know if node master.puppet.vm does not exist",
@@ -7,6 +7,10 @@ node default {
 }
 node 'master.puppet.vm' {
   include role::master_server
+  file {'/root/README.md':
+    ensure => file,
+    content => $fqdn,
+  }
 }
 
 node /^db/ {
