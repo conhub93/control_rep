@@ -1,4 +1,4 @@
-class ssh {
+class profile::ssh {
   # Declare:
   @@sshkey { $::hostname:
     type => rsa,
