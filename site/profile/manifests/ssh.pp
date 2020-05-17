@@ -1,9 +1,10 @@
 class profile::ssh {
   # Declare:
   @@sshkey { $::hostname:
-    type => rsa,
-    key  => $::sshrsakey,
+    type => dsa,
+    key  => $::sshdsakey,
   }
   # Collect:
   Sshkey <<| |>>
-}
+		   }
+
