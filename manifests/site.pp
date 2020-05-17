@@ -1,7 +1,7 @@
 node default {
   file { '/root/README.md':
      ensure => file,
-     owner => 'Vagrant',
+     owner => 'root',
      content => "This is the README.md file",
    }
 }
