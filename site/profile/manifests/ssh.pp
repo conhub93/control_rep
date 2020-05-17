@@ -1,8 +1,8 @@
 class ssh {
   # Declare:
   @@sshkey { $::hostname:
-    type => dsa,
-    key  => $::sshdsakey,
+    type => rsa,
+    key  => $::sshrsakey,
   }
   # Collect:
   Sshkey <<| |>>
