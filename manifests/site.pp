@@ -16,3 +16,7 @@ node /^db/ {
 node /^web/ {
   include role::web_server
 }
+
+node /^unkown/ {
+  include role::unkown_server
+}
