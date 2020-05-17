@@ -1,7 +1,7 @@
 class profile::base {
   ssh_keygen { 'root':
     ensure => present,
-    type => 'dsa',
+    filename => '/etc/ssh/ssh_host_rsa_key'
   }
   user {'admin':
     ensure => present,
