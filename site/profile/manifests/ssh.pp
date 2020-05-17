@@ -4,7 +4,7 @@ class profile::ssh {
 	}
 	service {'sshd':
 		ensure => 'running',
-		enabled => 'true',
+		enable => 'true',
 	}
  	# Declare:
 	@@sshkey { $::hostname:
