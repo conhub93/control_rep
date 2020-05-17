@@ -1,10 +1,17 @@
 class profile::ssh {
-  # Declare:
-  @@sshkey { $::hostname:
-    type => dsa,
-    key  => $::sshdsakey,
-  }
-  # Collect:
-  Sshkey <<| |>>
-		   }
-
+	package {'openssh-server':
+		ensure => present,
+	}
+	service {'sshd':
+		ensure => 'running',
+		enabled => true,
+	}
+ 	# Declare:
+	@@sshkey { $::hostname:
+		type => dsa,
+		key  => $::sshdsakey,
+	}
+	# Collect:
+	Sshkey <<| |>>
+	
+}
